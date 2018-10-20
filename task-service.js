@@ -15,6 +15,7 @@ class TaskService  {
 	
 	insert(title, description, local, cb){
 		const options = {
+			/*
 			json:{
 				title: title,
 				description: description,
@@ -22,9 +23,19 @@ class TaskService  {
 			},
 			url:	URI,
 			header:	"Content-Type: application/json"
+			*/
+			body:{
+				title: title,
+				description: description,
+				location: local
+			},
+			url:	URI,
+			json: true
 		}
 		request.post(options,cb);
 	}
+	
+	 
 	/*
 	getTask(id, cb){
 		request.get(URI + id,cb)
