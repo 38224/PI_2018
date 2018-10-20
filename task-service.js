@@ -35,16 +35,20 @@ class TaskService  {
 		request.post(options,cb);
 	}
 	
+	delete(id, cb){
+		const options = {
+			url:  URI + "/" + id,
+			json: true
+		}
+		request.delete(options,cb);
+	}
 	 
 	/*
 	getTask(id, cb){
 		request.get(URI + id,cb)
 	}
 	
-	init(host,index)
 	findBy(prop, value, cb)
-	delete(id, cb)
-	insert(title, description, local, cb){
 	update(task, cb)
 	*/
 	}
