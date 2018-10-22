@@ -43,15 +43,26 @@ class TaskService  {
 		request.delete(options,cb);
 	}
 	 
-	/*
+	
 	getTask(id, cb){
 		request.get(URI + id,cb)
 	}
-	
-	findBy(prop, value, cb)
-	update(task, cb)
+	/*
+	findBy(prop, value, cb){
+		
 	*/
+	
+	update(task, cb){
+		let id = task._id;
+		const options = {
+			url:  URI + "/" + id,
+			body: task,
+			json: true
+		}
+		request.put(options,cb);
 	}
+	 
+}
 
 module.exports = TaskService
 
