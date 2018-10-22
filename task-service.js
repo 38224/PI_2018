@@ -45,7 +45,7 @@ class TaskService  {
 	 
 	
 	getTask(id, cb){
-		request.get(URI + id,cb)
+		request.get(URI + "/" + id,cb)
 	}
 	/*
 	findBy(prop, value, cb){
@@ -53,7 +53,7 @@ class TaskService  {
 	*/
 	
 	update(task, cb){
-		let id = task._id;
+		let id = task.id;
 		const options = {
 			url:  URI + "/" + id,
 			body: task,
