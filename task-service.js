@@ -3,8 +3,7 @@
 const request = require('request')
 var URI = "";
 class TaskService  {
-	
-	 
+
 	 constructor(host,index) {
 		URI = host + '/' + index;
 	}
@@ -65,27 +64,3 @@ class TaskService  {
 }
 
 module.exports = TaskService
-
-/*
-class TaskService extends EventEmitter {
-    constructor(socket) {
-        super()
-        let buffer = ''
-        socket.on('data', data => {
-            buffer += data
-            let boundary = buffer.indexOf('\n\r')
-            while (boundary >= 0) {
-                const input = buffer.substring(0, boundary)
-                buffer = buffer.substring(boundary + 2)
-                this.emit('message', JSON.parse(input))
-                boundary = buffer.indexOf('\n\r')
-            }
-        })
-    }
-    static connect(socket) {
-        return new TaskService(socket)
-    }
-}
-
-module.exports = TaskService
-*/

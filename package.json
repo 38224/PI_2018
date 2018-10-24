@@ -1,14 +1,17 @@
 {
-  "name": "aulapraticapi",
+  "name": "Laboratorio3",
   "version": "1.0.0",
   "description": "",
   "main": "taskServiceTest.js",
   "dependencies": {
     "request": "^2.88.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC"
